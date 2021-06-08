@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <meta charset = "UTF-8" name = "viewport" content = "width = device-width, initial-scale = 0.5">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  -ms-flex: 50%; /* IE 10 */
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+nav {
+  width: 100%;
+  height: 45px;
+  background-color: transparent;
+  position:relative;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 0 0;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: arial;
+  font-size: 15px;
+  font-weight:lighter;
+}
+
+li a:hover {
+  background-color: #ddd;
+  color: gray;
+}
+
+@media screen and (max-width: 600px) {
+  .nav a:not(:first-child) {
+    display: none;
+  }
+  .nav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+#footer {
+  background: transparent;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 1.2em;
+}
+#footer ul {
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  height:40px;
+  margin: 0;
+  padding: 5px;
+}
+#footer li {
+  list-style: none;
+  display: inline-block;
+  float: left;
+  line-height: 5px;
+}
+
+#footer li a:hover {
+  color: #ffffff;
+}
+
+.footer_text {
+  display: flex;
+  font-size: 12px;
+  color: #D3D3D3;
+  height:40px;
+  margin: 0;
+  padding: 5px;
+}
+
+.class {
+  margin: 0 auto;
+  text-align: center;
+  width: 10%;
+  display: flex;
+}
+
+</style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav">
+      <ul>
+        <li> <a class="active" href="index.html">HOME<em></em></a></li>
+        <li> <a class="active" href="index.html">ABOUT<em></em></a></li>
+        <li> <a class="active" href="maps_postcards.html">MAPS & POSTCARDS<em></em></a></li>
+        <li> <a class="active" href="index.html">CONTACT<em></em></a></li>
+
+              <div class="topnav-right">
+              <li><a class="active" href="https://www.instagram.com/tianegona/" target="_blank"><i class="fa fa-1x fab fa-instagram"></i></a></li>
+              <li><a class="active" href="https://www.facebook.com/sonialindblom" target="_blank"><i class="fa fa-1x fab fa-facebook-f"></i></a></li>
+              <li><a class="active" href="https://github.com/wemigliari" target="_blank"><i class="fa fa-1x fab fa-github"></i></a></li>
+            </div>
+      </ul>
+   </div>
+  </nav>
+<!-- Header -->
+<div class="header" id="myHeader">
+  <h1>Aerial Photographs</h1>
+  <p>Click on the buttons to change the grid view.</p>
+  <button class="btn" onclick="one()">1</button>
+  <button class="btn active" onclick="two()">2</button>
+  <button class="btn" onclick="four()">3</button>
+</div>
+
+<!-- Photo Grid -->
+<div class="bg-img2">
+<div class="row">
+  <div class="column">
+  <img src="images/back_bw.png" style="width:100%">
+  </div>
+  <div class="column">
+  <img src="images/back_bw.png" style="width:100%">
+  </div>
+  <div class="column">
+  <img src="images/back_bw.png" style="width:100%">
+  </div>
+</div>
+
+<footer id="footer" class="color color-secondary short">
+ <div class="class">
+   <div class="row">
+     <div class="col-md-12 center">
+       <footer class = "footer_text"> <small>&copy; Copyright 2021 </small> </footer>
+     </div>
+   </div>
+  </div>
+</footer>
+
+<script>
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+
+// Declare a loop variable
+var i;
+
+// Full-width images
+function one() {
+    for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "100%";  // IE10
+    elements[i].style.flex = "100%";
+  }
+}
+
+// Two images side by side
+function two() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "50%";  // IE10
+    elements[i].style.flex = "50%";
+  }
+}
+
+// Four images side by side
+function four() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "25%";  // IE10
+    elements[i].style.flex = "25%";
+  }
+}
+
+// Add active class to the current button (highlight it)
+var header = document.getElementById("myHeader");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+</div>
+
+</body>
+</html>

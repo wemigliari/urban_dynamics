@@ -1,0 +1,66 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <meta charset = "UTF-8" name = "viewport" content = "width = device-width, initial-scale = 0.5">
+
+        <title></title>
+          <style>
+            select, p {
+              font: 1em arial;
+                  }
+          </style>
+
+  </head>
+
+<body>
+  <div class="bgbw-img">
+    <div class="bg-banner">
+    </div>
+
+    <div class="box">
+    <h2>International Environmental Law</h2>
+
+  </div>
+
+  </div>
+
+
+  <footer id="footer" class="color color-secondary short">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-12 center">
+         <footer class = "footer_text"> <small>&copy; Copyright 2021</small> </footer>
+       </div>
+     </div>
+    </div>
+ </footer>
+
+</body>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+<script>
+    let selectText = (ele) => {
+      let msg = document.getElementById('msg');
+        msg.innerHTML = 'Selected Text: <b>' + ele.options[ele.selectedIndex].text + '</b> </br>' +
+            'Value of the Selected Text: <b>' + ele.value + '</b>';
+    }
+</script>
+
+</html>

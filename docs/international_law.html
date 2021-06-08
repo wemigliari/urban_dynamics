@@ -1,0 +1,81 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <meta charset = "UTF-8" name = "viewport" content = "width = device-width, initial-scale = 0.5">
+
+        <title></title>
+          <style>
+            select, p {
+              font: 1em arial;
+                  }
+          </style>
+
+  </head>
+
+<body>
+  <div class="bgbw-img">
+    <div class="bg-banner">
+    </div>
+
+    <div class="box">
+    <h2>International Law</h2>
+    <p>This section is devoted to the analysis of the environmental disasters that happened/take place in the
+      State of Minas Gerais from the perspective of the International Law. We use international declarations,
+      treaties and conventions on human rights and international environmental law including resolutions passed by the
+      General Assembly of the United Nations and internatioal regimes to frame the action of mining companies
+      in clear violation of fundamental rights. To check on the Brazilian national legislation
+      <a href="national_legis.html" style="color:steelblue"> click here</a>.</p>
+
+    <label for="area"></label>
+
+      <select id="selectbox" name="" onchange="javascript:location.href = this.value;">
+        <option value="" selected>--Select an area of IL--</option>
+        <option value="international_law_hr.html">Human Rights</option>
+        <option value="international_law_el.html">International Environmental Law</option>
+        <option value="unr.html">General Assembly Resolutions, United Nations</option>
+        <option value="ir.html">International Regimes</option>
+      </select>
+  </div>
+
+  </div>
+
+
+  <footer id="footer" class="color color-secondary short">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-12 center">
+         <footer class = "footer_text"> <small>&copy; Copyright 2021</small> </footer>
+       </div>
+     </div>
+    </div>
+ </footer>
+
+</body>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+<script>
+    let selectText = (ele) => {
+      let msg = document.getElementById('msg');
+        msg.innerHTML = 'Selected Text: <b>' + ele.options[ele.selectedIndex].text + '</b> </br>' +
+            'Value of the Selected Text: <b>' + ele.value + '</b>';
+    }
+</script>
+
+</html>

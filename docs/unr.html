@@ -1,0 +1,79 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <meta charset = "UTF-8" name = "viewport" content = "width = device-width, initial-scale = 0.5">
+
+        <title></title>
+          <style>
+            select, p {
+              font: 1em arial;
+                  }
+          </style>
+
+  </head>
+
+<body>
+  <div class="bgbw-img">
+    <div class="bg-banner">
+    </div>
+
+    <div class="box">
+    <h2>General Assembly Resolutions, United Nations</h2>
+    <p> <a href="https://digitallibrary.un.org/record/687002?ln=en" target="_blank" style="color:steelblue">Resolution 64/292 (2010)</a>
+      recognizes the right to development in line with <a href="https://digitallibrary.un.org/record/404866?ln=en" target="_blank" style="color:steelblue">Resolution 54/175 (1999)</a>.
+      Other resolutions such as <a href="http://www.un-documents.net/a55r196.htm" target="_blank" style="color:steelblue">55/196 (2000)</a>,
+      <a href="http://www.un-documents.net/a58r217.htm" target="_blank" style="color:steelblue">558/217 (2003)</a>,
+      <a href="https://undocs.org/pdf?symbol=en/A/RES/59/237" target="_blank" style="color:steelblue">59/228 (2004)</a>,
+      <a href="https://undocs.org/en/A/RES/61/192&Lang=E" target="_blank" style="color:steelblue">61/192 (2006)</a> and
+      <a href="https://undocs.org/en/A/RES/64/198" target="_blank" style="color:steelblue">64/198 (2009)</a> reaffirm the importance of the access
+      to fresh water, to drinkable water and sanitation as vital for the effectiveness of human rights. </p>
+
+  </div>
+
+  </div>
+
+  <footer id="footer" class="color color-secondary short">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-12 center">
+         <footer class = "footer_text"> <small>&copy; Copyright 2021</small> </footer>
+       </div>
+     </div>
+    </div>
+ </footer>
+
+</body>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+<script>
+    let selectText = (ele) => {
+      let msg = document.getElementById('msg');
+        msg.innerHTML = 'Selected Text: <b>' + ele.options[ele.selectedIndex].text + '</b> </br>' +
+            'Value of the Selected Text: <b>' + ele.value + '</b>';
+    }
+</script>
+
+<script type="text/javascript">
+    window.onload = function(){
+        location.href=document.getElementById("selectbox").value;
+    }
+</script>
+
+</html>
